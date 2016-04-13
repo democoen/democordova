@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    </head>
+    
+    <body>
+
+        <div id="detailsPage" data-role="page" data-add-back-btn="true" data-title="Detail pagina">
+            
+            <!-- Header -->
+            <div data-role="header" data-position="fixed" data-theme="e">
+                <a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" data-theme="c" data-icon="back">Terug</a>
+                <h1>Overzicht</h1>
+                <a href="#mypanel" class="ui-btn ui-btn-inline ui-icon-gear ui-btn-icon-notext"></a>
+            </div>
+            <!-- /Header -->
+            
+
+            <div data-role="content"> 
+                <div id="addressDetails">
+                    <p id="addressId" style="display:none"></p>
+                    <h3 id="fullName"></h3>
+                    <p id="title"></p>
+                    <p id="city"></p>
+                </div>
+                <ul id="actionList" data-role="listview" data-inset="true"></ul>
+            </div>
+            
+            
+            <!--Buttons -->
+            <p align="center">
+                <a href="#" id="popupEditDialog" data-position-to="window" data-role="button" data-mini="true" data-inline="true" data-transition="slidedown" data-icon="edit" data-theme="a">Bewerken</a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-role="button" data-mini="true" data-inline="true" data-transition="pop" data-icon="delete" data-theme="a">Verwijderen</a>
+            </p>
+            <!--/Buttons -->
+
+
+            <!-- Footer -->
+            <div data-role="footer" class="footer-docs ui-footer ui-bar-c" data-theme="a" role="contentinfo" data-position="fixed">
+              <p class="jqm-version" >Versie 0.0.1</p>
+            </div>
+            <!-- /Footer -->
+
+
+            <!-- Confirm delete -->
+            <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+                <div data-role="header" data-theme="a" class="ui-corner-top">
+                    <h1>Verwijderen?</h1>
+                </div>
+                <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+                    <h3 class="ui-title">Weet u het zeker?</h3>
+                    <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Annuleren</a>
+                    <a href="#" onclick="deleteItem()" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">Verwijderen</a>
+                </div>
+            </div>
+            <!-- /Confirm delete -->
+
+
+            <!-- Popup confirm deletion -->
+             <div data-role="popup" id="popupCloseLeft" class="ui-content" style="max-width:280px">
+                 <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
+                 <p>Adres verwijderd</p>
+             </div>
+            <!-- /Confirm deletion -->
+
+        </div><!--/div page-->
+    
+    <script src="js/jquery-1.12.2.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>  
+    <script src="js/addressdetails.js"></script>
+
+  </body>
+
+</html>

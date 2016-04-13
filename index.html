@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adressen</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <script src="js/jquery-1.12.2.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+	<script src="js/list.js"></script>
+	<script src="js/addressdetails.js"></script>
+	<link rel="stylesheet" href="css/themes/custom.css"><!-- custom theme roller -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css"/>
+	<link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body>
+        
+	<div id="addressListPage" data-role="page" data-theme="a" data-title="Overzicht">
+
+		<!-- panel content -->
+		<div data-role="panel" id="mypanel" position-fixed="true" data-position="right">
+		    <a href="#loginPage" data-rel="dialog" class="ui-btn ui-btn-corner-all ui-btn ui-icon-grid ui-shadow ui-btn-inline" title="Login" data-form="ui-icon" data-role="button" role="button" data-theme="c" data-transition="flip">Login</a>
+		    <div>Switch</div>
+		    <div>
+		    <select name="flip" id="flip" data-role="slider">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+			</div>
+			<fieldset data-role="controlgroup" data-type="vertical">
+			    <legend>Controlgroup:</legend>
+			    <button class="ui-shadow ui-btn ui-corner-all ui-icon-home ui-btn-icon-right">One</button>
+			    <input type="button" data-icon="back" data-iconpos="right" value="Two">
+			    <a href="#" class="ui-shadow ui-btn ui-corner-all ui-icon-grid ui-btn-icon-right">Three</a>
+			</fieldset>
+		</div>
+		<!-- /panel -->
+
+
+		<!-- Header -->
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<a href="index.html" data-ajax="false" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home ui-btn-icon-notext ui-shadow" title="Home" data-form="ui-icon" data-role="button" role="button" data-theme="c">Home</a>
+			<h1>Overzicht</h1>
+			<a href="#mypanel" class="ui-btn ui-btn-inline ui-icon-gear ui-btn-icon-notext"></a>
+		</div>
+		<!-- /Header -->
+
+		<!-- Content -->
+		<div data-role="content">
+			<div>
+				<a href="#newAddress" data-transition="flip" class="ui-btn ui-btn-corner-all ui-btn ui-icon-grid ui-shadow ui-btn-inline" title="Nieuw" data-form="ui-icon" data-role="button" role="button" data-theme="c">Nieuw</a>
+			</div>
+			<!-- Listview -->
+			<div>
+	        	<ul id="employeeList" data-role="listview" data-filter="true" data-filter-placeholder="Zoeken..."></ul>
+	        </div>
+			<!-- /Listview -->
+	    </div>
+	    <!-- /Content -->
+	
+
+        <!-- Footer -->
+        <div data-role="footer" class="footer-docs ui-footer ui-bar-c" data-theme="a" role="contentinfo" data-position="fixed">
+          <p class="jqm-version" >Versie 0.0.1</p>
+        </div>
+        <!-- /Footer -->
+
+
+
+
+	</div><!-- /page id=addressListPage -->
+
+	<!-- page id=loginPage 
+	<div id="loginPage" data-role="page" data-theme="a" data-title="Login">
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Login</h1>
+		</div>
+		<div data-role="content">		
+
+				<form id="createForm" class="ui-body ui-body-a ui-corner-all">
+					<fieldset>
+						<label for="username">Username:</label>
+		                <input type="text" value="" name="username" id="username"/>
+						<label for="password">Wachtwoord:</label>
+		                <input type="text" value="" name="password" id="password"/>
+	                </fieldset>
+	            </form>
+
+	            <div><a href="login.php" data-role="button" data-icon="delete" data-iconpos="left" data-mini="true" data-inline="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-btn-inline ui-shadow ui-btn-corner-all ui-mini ui-btn-icon-left ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Login</span><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></span></a>
+	            <a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" data-theme="c" data-icon="back">Terug</a>
+	            </div>
+		</div>
+	</div>
+	< //page id=loginPage -->
+
+
+	<!-- page id=newAddress -->
+	<div id="newAddress" data-role="page" data-theme="a" data-title="Nieuw adres">
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<a href="/index.html" data-ajax="false" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home ui-btn-icon-notext ui-shadow" title="Home" data-form="ui-icon" data-role="button" role="button" data-theme="c">Home</a>
+			<h1>Nieuw</h1>
+		</div>
+		<div data-role="content">
+			<form id="createForm" class="ui-body ui-body-a ui-corner-all">
+				<fieldset>
+					<div data-role="fieldcontain">
+						
+						<label for="firstname">Voornaam:</label>
+                        <input type="text" value="" name="firstName" id="firstname"/>
+						
+						<label for="lastname">Achternaam:</label>
+                        <input type="text" value="" name="lastName" id="lastname"/>
+						
+						<label for="title">Titel:</label>
+                        <input type="text" value="" name="title" id="title"/>
+						
+						<label for="department">Afdeling:</label>
+                        <input type="text" value="" name="department" id="department"/>
+						
+						<label for="lastname">Telefoon:</label>
+                        <input type="text" value="" name="officePhone" id="officephone"/>
+						
+						<label for="cellphone">Mobiel:</label>
+                        <input type="text" value="" name="cellPhone" id="cellphone"/>
+						
+						<label for="email">Email:</label>
+                        <input type="text" value="" name="email" id="email"/>
+						
+						<label for="email">Plaats:</label>
+                        <input type="text" value="" name="city" id="city"/>
+					</div>
+				</fieldset>
+				<input type="submit" data-theme="b" data-mini="true" name="submit" id="submit" value="Opslaan" >
+			</form>
+		</div>
+	</div><!-- /page id=newAddress -->
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css"/>
+		<link rel="stylesheet" href="css/styles.css"/>
+	</head>
+
+	<body>
+
+	<div id="addressListPage" data-role="page" data-theme="a">
+	
+		<!-- Header -->
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<a href="../" data-ajax="false" class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home ui-btn-icon-notext ui-shadow" title="Home" data-form="ui-icon" data-role="button" role="button" data-theme="c">Home</a>
+			<h1>Bewerken</h1>
+		</div><!-- /Header -->
+
+		<!-- Content -->
+		<div data-role="content">
+			
+			<form id="editForm">
+				<label for="id">Id:</label>
+				<input type="text" name="id" id="id" />
+				<label for="firstname">Voornaam:</label>
+				<input type="text" name="firstname" id="firstname"/>
+				<label for="lastname">Achternaam:</label>
+				<input type="text" name="lastname" id="lastname"/>
+				<label for="title">Titel:</label>
+				<input type="text" name="title" id="title"/>
+				<label for="department">Afdeling:</label>
+				<input type="text" name="department" id="department"/>
+				<label for="city">Woonplaats:</label>
+				<input type="text" name="city" id="city"/>
+				<label for="email">Email:</label>
+				<input type="text" name="email" id="email"/>
+			</form>
+
+			<div>
+				<button id="submitedit" type="submit" data-theme="b" data-mini="true" class="ui-btn-hidden" aria-disabled="false">Opslaan</button>
+			</div>
+
+	    </div><!-- /Content -->
+
+	</div><!--/div page-->
+
+	<script src="js/jquery-1.12.2.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>  
+	<script src="js/edit.js"></script>
+
+	</body>
+
+</html>

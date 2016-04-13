@@ -1,0 +1,11 @@
+#actionList {
+	clear: both;
+}
+
+.ui-header{
+	background-color: rgba(243, 215, 181, 0.80);
+}
+
+.jqm-version{
+	text-align: center;
+}
